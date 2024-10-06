@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.5.1'
+        classpath 'com.android.tools.build:gradle:8.1.1'
     }
 }
 
@@ -22,6 +22,7 @@ allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace = "com.it_nomads.fluttersecurestorage"
     if (project.android.hasProperty("namespace")) {
         namespace("com.it_nomads.fluttersecurestorage")
     }
@@ -30,7 +31,7 @@ android {
         buildConfig = true
     }
 
-    compileSdk 34
+    compileSdkVersion 33
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -38,9 +39,9 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 18
     }
-    
+
 }
 
 dependencies {
